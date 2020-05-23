@@ -1,0 +1,20 @@
+package com.example.exam9.controller;
+
+
+import com.example.exam9.model.CommentRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class CommentContoller {
+    @Autowired
+    CommentRepo commentRepo;
+
+    @GetMapping("/postDetail")
+    public String getPost(Model model){
+        return "PostDetail";
+    }
+
+}
